@@ -10,10 +10,8 @@ import Cocoa
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate, WifiManagerDelegate {
-    private lazy var windowController: NSWindowController = {
-        let storyboard = NSStoryboard(name: Storyboards.setupWindow, bundle: nil)
-        return storyboard.instantiateInitialController() as? NSWindowController ?? NSWindowController()
-    }()
+    private let storyboard = NSStoryboard(name: Storyboards.setupWindow, bundle: nil)
+    private var windowController: NSWindowController?
     private let wifiManager = WifiManager()
     private let statusItem = NSStatusBar.systemStatusBar().statusItemWithLength(-1)
     private let menu = NSMenu()
@@ -45,7 +43,8 @@ class AppDelegate: NSObject, NSApplicationDelegate, WifiManagerDelegate {
     }
     
     func showSetupWindow() {
-        windowController.showWindow(self)
+        windowController = storyboard.instantiateInitialController() as? NSWindowController
+        windowController?.showWindow(self)
     }
     
     // MARK: WifiManagerDelegate
