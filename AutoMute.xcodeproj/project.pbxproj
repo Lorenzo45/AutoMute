@@ -26,7 +26,7 @@
 		88DC98781B93C5740060FA6B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		88DC987B1B93C5740060FA6B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		88DC987D1B93C5740060FA6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		88DC98831B93C5E40060FA6B /* Auto Volume-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Auto Volume-Bridging-Header.h"; sourceTree = "<group>"; };
+		88DC98831B93C5E40060FA6B /* AutoMute-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AutoMute-Bridging-Header.h"; sourceTree = "<group>"; };
 		88DC98841B93C5E40060FA6B /* ISSoundAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISSoundAdditions.h; sourceTree = "<group>"; };
 		88DC98851B93C5E40060FA6B /* ISSoundAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISSoundAdditions.m; sourceTree = "<group>"; };
 		88DC98871B93C63D0060FA6B /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
@@ -55,7 +55,7 @@
 			children = (
 				88DC98891B93CB740060FA6B /* CoreWLAN.framework */,
 				88DC98871B93C63D0060FA6B /* CoreAudio.framework */,
-				88DC98731B93C5740060FA6B /* Auto Volume */,
+				88DC98731B93C5740060FA6B /* AutoMute */,
 				88DC98721B93C5740060FA6B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -68,7 +68,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		88DC98731B93C5740060FA6B /* Auto Volume */ = {
+		88DC98731B93C5740060FA6B /* AutoMute */ = {
 			isa = PBXGroup;
 			children = (
 				88DC98741B93C5740060FA6B /* AppDelegate.swift */,
@@ -79,7 +79,7 @@
 				ED1FF7521B996DBF003AD5D1 /* SetupWindow.storyboard */,
 				88DC988B1B93E0130060FA6B /* Supporting Files */,
 			);
-			path = "Auto Volume";
+			path = AutoMute;
 			sourceTree = "<group>";
 		};
 		88DC988B1B93E0130060FA6B /* Supporting Files */ = {
@@ -91,7 +91,7 @@
 				ED8474861B98EFFD00C529EE /* LaunchAtLoginController.m */,
 				88DC98781B93C5740060FA6B /* Assets.xcassets */,
 				88DC987D1B93C5740060FA6B /* Info.plist */,
-				88DC98831B93C5E40060FA6B /* Auto Volume-Bridging-Header.h */,
+				88DC98831B93C5E40060FA6B /* AutoMute-Bridging-Header.h */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -276,11 +276,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = "Auto Volume/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/AutoMute/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.LorenzoGentile.AutoMute;
 				PRODUCT_NAME = AutoMute;
-				SWIFT_OBJC_BRIDGING_HEADER = "Auto Volume/Auto Volume-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "AutoMute/AutoMute-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -291,11 +291,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = "Auto Volume/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/AutoMute/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.LorenzoGentile.AutoMute;
 				PRODUCT_NAME = AutoMute;
-				SWIFT_OBJC_BRIDGING_HEADER = "Auto Volume/Auto Volume-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "AutoMute/AutoMute-Bridging-Header.h";
 			};
 			name = Release;
 		};

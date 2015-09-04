@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  Auto Volume
+//  AutoMute
 //
 //  Created by Lorenzo Gentile on 2015-08-30.
 //  Copyright © 2015 Lorenzo Gentile. All rights reserved.
