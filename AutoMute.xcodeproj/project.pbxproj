@@ -1,0 +1,326 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		88DC98751B93C5740060FA6B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DC98741B93C5740060FA6B /* AppDelegate.swift */; };
+		88DC98771B93C5740060FA6B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DC98761B93C5740060FA6B /* ViewController.swift */; };
+		88DC98791B93C5740060FA6B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88DC98781B93C5740060FA6B /* Assets.xcassets */; };
+		88DC987C1B93C5740060FA6B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88DC987A1B93C5740060FA6B /* Main.storyboard */; };
+		88DC98861B93C5E40060FA6B /* ISSoundAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 88DC98851B93C5E40060FA6B /* ISSoundAdditions.m */; settings = {ASSET_TAGS = (); }; };
+		88DC98881B93C63D0060FA6B /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88DC98871B93C63D0060FA6B /* CoreAudio.framework */; };
+		88DC988D1B943EB80060FA6B /* WifiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DC988C1B943EB80060FA6B /* WifiManager.swift */; settings = {ASSET_TAGS = (); }; };
+		88DC988F1B94A61D0060FA6B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DC988E1B94A61D0060FA6B /* Constants.swift */; settings = {ASSET_TAGS = (); }; };
+		ED1FF7531B996DBF003AD5D1 /* SetupWindow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED1FF7521B996DBF003AD5D1 /* SetupWindow.storyboard */; settings = {ASSET_TAGS = (); }; };
+		ED8474871B98EFFD00C529EE /* LaunchAtLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED8474861B98EFFD00C529EE /* LaunchAtLoginController.m */; settings = {ASSET_TAGS = (); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		88DC98711B93C5740060FA6B /* AutoMute.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutoMute.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		88DC98741B93C5740060FA6B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		88DC98761B93C5740060FA6B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		88DC98781B93C5740060FA6B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		88DC987B1B93C5740060FA6B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		88DC987D1B93C5740060FA6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		88DC98831B93C5E40060FA6B /* Auto Volume-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Auto Volume-Bridging-Header.h"; sourceTree = "<group>"; };
+		88DC98841B93C5E40060FA6B /* ISSoundAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISSoundAdditions.h; sourceTree = "<group>"; };
+		88DC98851B93C5E40060FA6B /* ISSoundAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISSoundAdditions.m; sourceTree = "<group>"; };
+		88DC98871B93C63D0060FA6B /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
+		88DC98891B93CB740060FA6B /* CoreWLAN.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreWLAN.framework; path = System/Library/Frameworks/CoreWLAN.framework; sourceTree = SDKROOT; };
+		88DC988C1B943EB80060FA6B /* WifiManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WifiManager.swift; sourceTree = "<group>"; };
+		88DC988E1B94A61D0060FA6B /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		ED1FF7521B996DBF003AD5D1 /* SetupWindow.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SetupWindow.storyboard; sourceTree = "<group>"; };
+		ED8474851B98EFFD00C529EE /* LaunchAtLoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LaunchAtLoginController.h; sourceTree = "<group>"; };
+		ED8474861B98EFFD00C529EE /* LaunchAtLoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaunchAtLoginController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		88DC986E1B93C5740060FA6B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				88DC98881B93C63D0060FA6B /* CoreAudio.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		88DC98681B93C5740060FA6B = {
+			isa = PBXGroup;
+			children = (
+				88DC98891B93CB740060FA6B /* CoreWLAN.framework */,
+				88DC98871B93C63D0060FA6B /* CoreAudio.framework */,
+				88DC98731B93C5740060FA6B /* Auto Volume */,
+				88DC98721B93C5740060FA6B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		88DC98721B93C5740060FA6B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				88DC98711B93C5740060FA6B /* AutoMute.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		88DC98731B93C5740060FA6B /* Auto Volume */ = {
+			isa = PBXGroup;
+			children = (
+				88DC98741B93C5740060FA6B /* AppDelegate.swift */,
+				88DC988C1B943EB80060FA6B /* WifiManager.swift */,
+				88DC98761B93C5740060FA6B /* ViewController.swift */,
+				88DC988E1B94A61D0060FA6B /* Constants.swift */,
+				88DC987A1B93C5740060FA6B /* Main.storyboard */,
+				ED1FF7521B996DBF003AD5D1 /* SetupWindow.storyboard */,
+				88DC988B1B93E0130060FA6B /* Supporting Files */,
+			);
+			path = "Auto Volume";
+			sourceTree = "<group>";
+		};
+		88DC988B1B93E0130060FA6B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				88DC98841B93C5E40060FA6B /* ISSoundAdditions.h */,
+				88DC98851B93C5E40060FA6B /* ISSoundAdditions.m */,
+				ED8474851B98EFFD00C529EE /* LaunchAtLoginController.h */,
+				ED8474861B98EFFD00C529EE /* LaunchAtLoginController.m */,
+				88DC98781B93C5740060FA6B /* Assets.xcassets */,
+				88DC987D1B93C5740060FA6B /* Info.plist */,
+				88DC98831B93C5E40060FA6B /* Auto Volume-Bridging-Header.h */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		88DC98701B93C5740060FA6B /* AutoMute */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 88DC98801B93C5740060FA6B /* Build configuration list for PBXNativeTarget "AutoMute" */;
+			buildPhases = (
+				88DC986D1B93C5740060FA6B /* Sources */,
+				88DC986E1B93C5740060FA6B /* Frameworks */,
+				88DC986F1B93C5740060FA6B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AutoMute;
+			productName = "Auto Volume";
+			productReference = 88DC98711B93C5740060FA6B /* AutoMute.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		88DC98691B93C5740060FA6B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = "Lorenzo Gentile";
+				TargetAttributes = {
+					88DC98701B93C5740060FA6B = {
+						CreatedOnToolsVersion = 7.0;
+					};
+				};
+			};
+			buildConfigurationList = 88DC986C1B93C5740060FA6B /* Build configuration list for PBXProject "AutoMute" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 88DC98681B93C5740060FA6B;
+			productRefGroup = 88DC98721B93C5740060FA6B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				88DC98701B93C5740060FA6B /* AutoMute */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		88DC986F1B93C5740060FA6B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				88DC98791B93C5740060FA6B /* Assets.xcassets in Resources */,
+				ED1FF7531B996DBF003AD5D1 /* SetupWindow.storyboard in Resources */,
+				88DC987C1B93C5740060FA6B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		88DC986D1B93C5740060FA6B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				88DC988F1B94A61D0060FA6B /* Constants.swift in Sources */,
+				88DC98771B93C5740060FA6B /* ViewController.swift in Sources */,
+				88DC98751B93C5740060FA6B /* AppDelegate.swift in Sources */,
+				ED8474871B98EFFD00C529EE /* LaunchAtLoginController.m in Sources */,
+				88DC988D1B943EB80060FA6B /* WifiManager.swift in Sources */,
+				88DC98861B93C5E40060FA6B /* ISSoundAdditions.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		88DC987A1B93C5740060FA6B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				88DC987B1B93C5740060FA6B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		88DC987E1B93C5740060FA6B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		88DC987F1B93C5740060FA6B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		88DC98811B93C5740060FA6B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Auto Volume/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.LorenzoGentile.AutoMute;
+				PRODUCT_NAME = AutoMute;
+				SWIFT_OBJC_BRIDGING_HEADER = "Auto Volume/Auto Volume-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		88DC98821B93C5740060FA6B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Auto Volume/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.LorenzoGentile.AutoMute;
+				PRODUCT_NAME = AutoMute;
+				SWIFT_OBJC_BRIDGING_HEADER = "Auto Volume/Auto Volume-Bridging-Header.h";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		88DC986C1B93C5740060FA6B /* Build configuration list for PBXProject "AutoMute" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				88DC987E1B93C5740060FA6B /* Debug */,
+				88DC987F1B93C5740060FA6B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		88DC98801B93C5740060FA6B /* Build configuration list for PBXNativeTarget "AutoMute" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				88DC98811B93C5740060FA6B /* Debug */,
+				88DC98821B93C5740060FA6B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 88DC98691B93C5740060FA6B /* Project object */;
+}
