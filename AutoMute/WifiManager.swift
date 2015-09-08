@@ -10,7 +10,7 @@ import Foundation
 import CoreWLAN
 
 protocol WifiManagerDelegate: class {
-    func wifiNetworkDidChange(ssid: String?)
+    func performAction(action: Action)
 }
 
 class WifiManager: NSObject {
@@ -32,7 +32,7 @@ class WifiManager: NSObject {
         knownNetworks?.enumerateKeysAndObjectsUsingBlock { (key, object, stop) in
             if let network = object as? NSDictionary, ssid = network[NetworkKeys.ssid] as? String {
                 if network[NetworkKeys.lastConnected] != nil {
-                    let action = NSUserDefaults.standardUserDefaults().objectForKey(ssid) as? Int ?? Actions.DoNothing
+                    let action = NSUserDefaults.standardUserDefaults().objectForKey(ssid) as? Int ?? Action.DoNothing.rawValue
                     network.setValue(action, forKey: NetworkKeys.action)
                     usedNetworks += [network]
                 }
@@ -55,6 +55,17 @@ class WifiManager: NSObject {
         }
     }
     
+    func currentNetwork() -> String {
+        return lastSSID ?? "not connected"
+    }
+    
+    func currentAction() -> Action {
+        if let action = NSUserDefaults.standardUserDefaults().objectForKey(currentNetwork()) as? Int {
+            return Action(rawValue: action) ?? Action.DoNothing
+        }
+        return Action.DoNothing
+    }
+    
     // MARK: Scanning current network
     
     func startWifiScanning() {
@@ -67,7 +78,7 @@ class WifiManager: NSObject {
         let ssid = wifiInterface?.ssid()
         if lastSSID != ssid {
             lastSSID = ssid
-            delegate?.wifiNetworkDidChange(lastSSID)
+            delegate?.performAction(currentAction())
             NSUserDefaults.standardUserDefaults().setValue(lastSSID, forKey: DefaultsKeys.lastSSID)
             NSUserDefaults.standardUserDefaults().synchronize()
         }

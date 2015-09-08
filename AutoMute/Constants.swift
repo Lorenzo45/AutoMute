@@ -12,10 +12,18 @@ struct Constants {
     static let wifiCheckTimeInterval: NSTimeInterval = 2
 }
 
-struct Actions {
-    static let Mute = 0
-    static let Unmute = 1
-    static let DoNothing = 2
+enum Action: Int {
+    case Mute = 0
+    case Unmute = 1
+    case DoNothing = 2
+    
+    var description: String {
+        switch self {
+        case .Mute: return "Mute"
+        case .Unmute: return "Unmute"
+        case .DoNothing: return "Do Nothing"
+        }
+    }
 }
 
 struct Storyboards {
