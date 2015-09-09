@@ -11,7 +11,7 @@ AutoMute allows you to tell your computer to mute or unmute your Macbook when yo
 # Setup
 AutoMute has a super easy one-time setup. When you first launch the app, it shows a list of your most recently used wifi networks and you tell it what you want to happen when you connect to each one. Once everything is set up, you can close the preferences window and AutoMute will work in the background. 
 
-As long as you see the AutoMute icon on your status bar, AutoMute is working. This is also where you can change the settings later on in the future.
+As long as you see the AutoMute icon on your status bar, AutoMute is working. This is also where you can change the settings any time you like.
 
 # Developer Guide
 AutoMute was written in Swift 2 using Xcode 7 beta 6.
