@@ -17,6 +17,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, WifiManagerDelegate {
     private let menu = NSMenu()
     private let currentNetworkItem = NSMenuItem(title: "", action: "", keyEquivalent: "")
     private let infoItem = NSMenuItem(title: "", action: "", keyEquivalent: "")
+    private var lastActionDate: NSDate? = nil
     
     func applicationDidFinishLaunching(aNotification: NSNotification) {
         wifiManager.delegate = self
@@ -49,12 +50,8 @@ class AppDelegate: NSObject, NSApplicationDelegate, WifiManagerDelegate {
     // MARK: Button Handling
     
     func pressedStatusIcon() {
-        if currentNetworkItem.title.isEmpty {
-            currentNetworkItem.title = "Current wifi network: \(wifiManager.currentNetwork())"
-        }
-        if infoItem.title.isEmpty {
-            infoItem.title = "Next time you connect to this network, AutoMute will: \(wifiManager.currentAction().description)"
-        }
+        updateCurrentNetworkItem()
+        updateInfoItem()
         statusItem.popUpStatusItemMenu(menu)
     }
     
@@ -63,26 +60,35 @@ class AppDelegate: NSObject, NSApplicationDelegate, WifiManagerDelegate {
         windowController?.showWindow(self)
     }
     
+    private func updateCurrentNetworkItem() {
+        currentNetworkItem.title = "Current wifi network: \(wifiManager.currentNetwork())"
+    }
+    
+    private func updateInfoItem() {
+        if let date = lastActionDate {
+            let action = wifiManager.currentAction()
+            let actionDescription: String
+            switch action {
+            case .Mute: actionDescription = "Muted volume"
+            case .Unmute: actionDescription = "Unmuted volume"
+            default: actionDescription = "Last connected"
+            }
+            infoItem.title = "\(actionDescription) \(date.naturalDate)"
+        } else {
+            infoItem.title = "Next time you connect to this network, AutoMute will: \(wifiManager.currentAction().description)"
+        }
+    }
+    
     // MARK: WifiManagerDelegate
     
     func performAction(action: Action) {
+        lastActionDate = NSDate()
         switch action {
         case .Mute: NSSound.applyMute(true)
         case .Unmute: NSSound.applyMute(false)
         default: break
         }
-        
-        let actionDescription: String
-        switch action {
-        case .Mute: actionDescription = "Muted volume"
-        case .Unmute: actionDescription = "Unmuted volume"
-        default: actionDescription = "Last connected"
-        }
-        
-        currentNetworkItem.title = "Current wifi network: \(wifiManager.currentNetwork())"
-        infoItem.title = "\(actionDescription) \(NSDate().formattedDate)"
     }
-    
 }
 
 extension NSDate {
@@ -100,7 +106,7 @@ extension NSDate {
         return formatter
     }()
     
-    var formattedDate: String {
+    var naturalDate: String {
         let dateString = NSDate.dateFormatter.stringFromDate(self)
         if dateString == "Today" {
             return "at \(NSDate.timeFormatter.stringFromDate(self))"
