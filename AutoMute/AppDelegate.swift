@@ -56,8 +56,12 @@ class AppDelegate: NSObject, NSApplicationDelegate, WifiManagerDelegate {
     }
     
     func showSetupWindow() {
-        windowController = storyboard.instantiateInitialController() as? NSWindowController
-        windowController?.showWindow(self)
+        if let visible = windowController?.window?.visible where visible {
+            NSApp.activateIgnoringOtherApps(true)
+        } else {
+            windowController = storyboard.instantiateInitialController() as? NSWindowController
+            windowController?.showWindow(self)
+        }
     }
     
     private func updateCurrentNetworkItem() {
