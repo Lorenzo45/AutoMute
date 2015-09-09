@@ -1,5 +1,7 @@
 # AutoMute
-Have a MacBook that you use both for work and personal use? Constantly trying to remember to mute your sound when you get to school or work? 
+Have a MacBook that you use both for work and personal use? Constantly forgetting to mute your sound when you get to school or work?
+
+![Closing Laptop](http://giant.gfycat.com/ConsciousFeminineIrukandjijellyfish.gif)
 
 AutoMute allows you to tell your computer to mute or unmute your Macbook when you connect to certain wifi networks, eliminating the need to remember to mute and unmute your laptop every day and giving you the peace of mind that your laptop won't start playing sounds in the middle of class or in the office.
 
