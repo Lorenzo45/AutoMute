@@ -20,13 +20,14 @@
 
     <section class="main-content">
       <h1>
-<a id="automute" class="anchor" href="#automute" aria-hidden="true"><span class="octicon octicon-link"></span></a>AutoMute</h1>
+<a id="automute---download-here" class="anchor" href="#automute---download-here" aria-hidden="true"><span class="octicon octicon-link"></span></a>AutoMute - <a href="http://bit.do/AutoMute">Download Here</a>
+</h1>
 
 <p>Have a MacBook that you use both for work and personal use? Constantly forgetting to mute your sound when you get to school or work?</p>
 
 <p><img src="https://camo.githubusercontent.com/d89f9646e730659b163c31d653f96c3299694e42/687474703a2f2f6769616e742e6766796361742e636f6d2f436f6e7363696f757346656d696e696e654972756b616e646a696a656c6c79666973682e676966" alt="Closing Laptop"></p>
 
-<p>AutoMute allows you to tell your computer to mute or unmute your Macbook when you connect to certain wifi networks, eliminating the need to remember to mute and unmute your laptop every day and giving you the peace of mind that your laptop won't start playing sounds in the middle of class or in the office.</p>
+<p>AutoMute allows you to tell your computer to mute or unmute your Macbook when you connect to certain wifi networks, eliminating the need to remember to mute and unmute your laptop and giving you the peace of mind that your laptop won't start playing sounds in the middle of class or in the office.</p>
 
 <h1>
 <a id="screenshots" class="anchor" href="#screenshots" aria-hidden="true"><span class="octicon octicon-link"></span></a>Screenshots</h1>
@@ -45,13 +46,20 @@
 <h1>
 <a id="developer-guide" class="anchor" href="#developer-guide" aria-hidden="true"><span class="octicon octicon-link"></span></a>Developer Guide</h1>
 
-<p>AutoMute was written in Swift 2 using Xcode 7 beta 6.</p>
+<p>I've decided to make AutoMute open source and I welcome all feedback, issues, and pull requests. This is my first time making something open source, so if I'm doing something wrong or poorly please let me know!</p>
+
+<p>AutoMute was written in Swift 2 using Xcode 7 beta 6. Here are some quick descriptions of the main classes in the app:</p>
 
 <ul>
 <li>WifiManager - Monitors the current wifi network and the user's preferences and makes a delegate call when the wifi network changes.</li>
 <li>AppDelegate - Receives calls from the WifiManager and displays the status item and menu.</li>
 <li>SetupViewController - Essentially just a tableview that uses the WifiManager as a data source.</li>
 </ul>
+
+<h1>
+<a id="licensing" class="anchor" href="#licensing" aria-hidden="true"><span class="octicon octicon-link"></span></a>Licensing</h1>
+
+<p>See the file named "LICENSE".</p>
 
       <footer class="site-footer">
         <span class="site-footer-owner"><a href="https://github.com/Lorenzo45/AutoMute">AutoMute</a> is maintained by <a href="https://github.com/Lorenzo45">Lorenzo45</a>.</span>
