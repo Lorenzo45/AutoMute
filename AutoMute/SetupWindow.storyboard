@@ -21,11 +21,11 @@
             </objects>
             <point key="canvasLocation" x="226" y="252"/>
         </scene>
-        <!--View Controller-->
+        <!--Setup View Controller-->
         <scene sceneID="Pvf-ur-27Q">
             <objects>
                 <customObject id="W15-oo-Ihe" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
-                <viewController id="MpL-08-cH2" customClass="ViewController" customModule="AutoMute" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="MpL-08-cH2" customClass="SetupViewController" customModule="AutoMute" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="4pv-h7-CIO">
                         <rect key="frame" x="0.0" y="0.0" width="480" height="275"/>
                         <autoresizingMask key="autoresizingMask"/>

@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  SetupViewController.swift
 //  AutoMute
 //
 //  Created by Lorenzo Gentile on 2015-08-30.
@@ -8,7 +8,7 @@
 
 import Cocoa
 
-class ViewController: NSViewController, NSTableViewDataSource, NSTableViewDelegate {
+class SetupViewController: NSViewController, NSTableViewDataSource, NSTableViewDelegate {
     @IBOutlet weak var tableView: NSTableView!
     
     // MARK: NSTableViewDataSource
@@ -41,5 +41,4 @@ class ViewController: NSViewController, NSTableViewDataSource, NSTableViewDelega
     func tableView(tableView: NSTableView, shouldTrackCell cell: NSCell, forTableColumn tableColumn: NSTableColumn?, row: Int) -> Bool {
         return true
     }
-
 }

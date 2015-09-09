@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		88DC98751B93C5740060FA6B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DC98741B93C5740060FA6B /* AppDelegate.swift */; };
-		88DC98771B93C5740060FA6B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DC98761B93C5740060FA6B /* ViewController.swift */; };
+		88DC98771B93C5740060FA6B /* SetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DC98761B93C5740060FA6B /* SetupViewController.swift */; };
 		88DC98791B93C5740060FA6B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88DC98781B93C5740060FA6B /* Assets.xcassets */; };
 		88DC987C1B93C5740060FA6B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88DC987A1B93C5740060FA6B /* Main.storyboard */; };
 		88DC98861B93C5E40060FA6B /* ISSoundAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 88DC98851B93C5E40060FA6B /* ISSoundAdditions.m */; settings = {ASSET_TAGS = (); }; };
@@ -22,7 +22,7 @@
 /* Begin PBXFileReference section */
 		88DC98711B93C5740060FA6B /* AutoMute.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutoMute.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88DC98741B93C5740060FA6B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		88DC98761B93C5740060FA6B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		88DC98761B93C5740060FA6B /* SetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupViewController.swift; sourceTree = "<group>"; };
 		88DC98781B93C5740060FA6B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		88DC987B1B93C5740060FA6B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		88DC987D1B93C5740060FA6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -73,7 +73,7 @@
 			children = (
 				88DC98741B93C5740060FA6B /* AppDelegate.swift */,
 				88DC988C1B943EB80060FA6B /* WifiManager.swift */,
-				88DC98761B93C5740060FA6B /* ViewController.swift */,
+				88DC98761B93C5740060FA6B /* SetupViewController.swift */,
 				88DC988E1B94A61D0060FA6B /* Constants.swift */,
 				88DC987A1B93C5740060FA6B /* Main.storyboard */,
 				ED1FF7521B996DBF003AD5D1 /* SetupWindow.storyboard */,
@@ -168,7 +168,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				88DC988F1B94A61D0060FA6B /* Constants.swift in Sources */,
-				88DC98771B93C5740060FA6B /* ViewController.swift in Sources */,
+				88DC98771B93C5740060FA6B /* SetupViewController.swift in Sources */,
 				88DC98751B93C5740060FA6B /* AppDelegate.swift in Sources */,
 				ED8474871B98EFFD00C529EE /* LaunchAtLoginController.m in Sources */,
 				88DC988D1B943EB80060FA6B /* WifiManager.swift in Sources */,

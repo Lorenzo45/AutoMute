@@ -36,7 +36,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, WifiManagerDelegate {
         menu.addItem(NSMenuItem.separatorItem())
         menu.addItem(NSMenuItem(title: "Preferences...", action: Selector("showSetupWindow"), keyEquivalent: ""))
         menu.addItem(NSMenuItem.separatorItem())
-        menu.addItem(NSMenuItem(title: "Quit", action: Selector("terminate:"), keyEquivalent: ""))
+        menu.addItem(NSMenuItem(title: "Quit AutoMute", action: Selector("terminate:"), keyEquivalent: ""))
     }
     
     private func showSetupIfFirstLaunch() {
@@ -75,7 +75,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, WifiManagerDelegate {
             }
             infoItem.title = "\(actionDescription) \(date.naturalDate)"
         } else {
-            infoItem.title = "Next time you connect to this network, AutoMute will: \(wifiManager.currentAction().description)"
+            infoItem.title = "Connecting to this network will: \(wifiManager.currentAction().description)"
         }
     }
     
