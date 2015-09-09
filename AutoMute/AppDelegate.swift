@@ -75,7 +75,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, WifiManagerDelegate {
             switch action {
             case .Mute: actionDescription = "Muted volume"
             case .Unmute: actionDescription = "Unmuted volume"
-            default: actionDescription = "Last connected"
+            default: actionDescription = wifiManager.currentNetwork() != "not connected" ? "Last connected" : "Disconnected"
             }
             infoItem.title = "\(actionDescription) \(date.naturalDate)"
         } else {
