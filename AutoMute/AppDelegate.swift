@@ -61,6 +61,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, WifiManagerDelegate {
         } else {
             windowController = storyboard.instantiateInitialController() as? NSWindowController
             windowController?.showWindow(self)
+            NSApp.activateIgnoringOtherApps(true)
         }
     }
     
