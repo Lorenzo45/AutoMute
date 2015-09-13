@@ -17,7 +17,7 @@ class WifiManager: NSObject {
     private let wifiInterface = CWWiFiClient.sharedWiFiClient().interface()
     private var lastSSID: String?
     weak var delegate: WifiManagerDelegate?
-    static let networks = WifiManager.getUsedNetworks()
+    static var networks = WifiManager.getUsedNetworks()
     
     override init() {
         lastSSID = NSUserDefaults.standardUserDefaults().valueForKey(DefaultsKeys.lastSSID) as? String
@@ -25,15 +25,15 @@ class WifiManager: NSObject {
     
     // Retrieves network info from the user's preferences, returns only the networks that have been connected to and sorted by date last used
     // Also checks user defaults for the actions associated to that network and adds it as a property to the preferences
-    private class func getUsedNetworks() -> [NSDictionary] {
-        var usedNetworks = [NSDictionary]()
-        let airportPreferences = NSDictionary(contentsOfFile: Paths.airportPreferences)
-        let knownNetworks = airportPreferences?.valueForKey(NetworkKeys.knownNetworks) as? NSDictionary
-        knownNetworks?.enumerateKeysAndObjectsUsingBlock { (key, object, stop) in
-            if let network = object as? NSDictionary, ssid = network[NetworkKeys.ssid] as? String {
+    private class func getUsedNetworks() -> [[String: AnyObject]] {
+        var usedNetworks = [[String: AnyObject]]()
+        let airportPreferences = NSDictionary(contentsOfFile: Paths.airportPreferences) as? [String: AnyObject]
+        guard let knownNetworks = airportPreferences?[NetworkKeys.knownNetworks] as? [String: AnyObject] else { return usedNetworks }
+        for (_, object) in knownNetworks {
+            if var network = object as? [String: AnyObject], let ssid = network[NetworkKeys.ssid] as? String {
                 if network[NetworkKeys.lastConnected] != nil {
                     let action = NSUserDefaults.standardUserDefaults().objectForKey(ssid) as? Int ?? Action.DoNothing.rawValue
-                    network.setValue(action, forKey: NetworkKeys.action)
+                    network[NetworkKeys.action] = action
                     usedNetworks += [network]
                 }
             }
@@ -48,8 +48,8 @@ class WifiManager: NSObject {
     }
     
     class func updateActionForNetwork(action: Int, index: Int) {
-        WifiManager.networks[index].setValue(action, forKey: NetworkKeys.action)
-        if let ssid = WifiManager.networks[index].valueForKey(NetworkKeys.ssid) as? String {
+        WifiManager.networks[index][NetworkKeys.action] = action
+        if let ssid = WifiManager.networks[index][NetworkKeys.ssid] as? String {
             NSUserDefaults.standardUserDefaults().setValue(action, forKey: ssid)
             NSUserDefaults.standardUserDefaults().synchronize()
         }

@@ -19,9 +19,9 @@ class SetupViewController: NSViewController, NSTableViewDataSource, NSTableViewD
     
     func tableView(tableView: NSTableView, objectValueForTableColumn tableColumn: NSTableColumn?, row: Int) -> AnyObject? {
         if tableColumn?.identifier == ColumnIds.network {
-            return WifiManager.networks[row].valueForKey(NetworkKeys.ssid)
+            return WifiManager.networks[row][NetworkKeys.ssid]
         } else if tableColumn?.identifier == ColumnIds.action {
-            return WifiManager.networks[row].valueForKey(NetworkKeys.action)
+            return WifiManager.networks[row][NetworkKeys.action]
         }
         return nil
     }
