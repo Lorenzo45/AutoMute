@@ -11,12 +11,12 @@
 		88DC98771B93C5740060FA6B /* SetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DC98761B93C5740060FA6B /* SetupViewController.swift */; };
 		88DC98791B93C5740060FA6B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88DC98781B93C5740060FA6B /* Assets.xcassets */; };
 		88DC987C1B93C5740060FA6B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88DC987A1B93C5740060FA6B /* Main.storyboard */; };
-		88DC98861B93C5E40060FA6B /* ISSoundAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 88DC98851B93C5E40060FA6B /* ISSoundAdditions.m */; settings = {ASSET_TAGS = (); }; };
+		88DC98861B93C5E40060FA6B /* ISSoundAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 88DC98851B93C5E40060FA6B /* ISSoundAdditions.m */; };
 		88DC98881B93C63D0060FA6B /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88DC98871B93C63D0060FA6B /* CoreAudio.framework */; };
-		88DC988D1B943EB80060FA6B /* WifiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DC988C1B943EB80060FA6B /* WifiManager.swift */; settings = {ASSET_TAGS = (); }; };
-		88DC988F1B94A61D0060FA6B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DC988E1B94A61D0060FA6B /* Constants.swift */; settings = {ASSET_TAGS = (); }; };
-		ED1FF7531B996DBF003AD5D1 /* SetupWindow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED1FF7521B996DBF003AD5D1 /* SetupWindow.storyboard */; settings = {ASSET_TAGS = (); }; };
-		ED8474871B98EFFD00C529EE /* LaunchAtLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED8474861B98EFFD00C529EE /* LaunchAtLoginController.m */; settings = {ASSET_TAGS = (); }; };
+		88DC988D1B943EB80060FA6B /* WifiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DC988C1B943EB80060FA6B /* WifiManager.swift */; };
+		88DC988F1B94A61D0060FA6B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DC988E1B94A61D0060FA6B /* Constants.swift */; };
+		ED1FF7531B996DBF003AD5D1 /* SetupWindow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED1FF7521B996DBF003AD5D1 /* SetupWindow.storyboard */; };
+		ED8474871B98EFFD00C529EE /* LaunchAtLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED8474861B98EFFD00C529EE /* LaunchAtLoginController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
