@@ -21,6 +21,9 @@ class SetupViewController: NSViewController, NSTableViewDataSource, NSTableViewD
         if tableColumn?.identifier == ColumnIds.network {
             return WifiManager.networks[row][NetworkKeys.ssid]
         } else if tableColumn?.identifier == ColumnIds.action {
+            if let action = WifiManager.networks[row][NetworkKeys.action] as? Int where action == -1 {
+                WifiManager.networks[row][NetworkKeys.action] = Action.DoNothing.rawValue
+            }
             return WifiManager.networks[row][NetworkKeys.action]
         }
         return nil
