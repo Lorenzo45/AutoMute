@@ -1,4 +1,4 @@
-# AutoMute - [Download Here](http://bit.do/AutoMute)
+# AutoMute - [Download Version 1.1 Here](http://bit.ly/AutoMute1-1)
 
 Have a MacBook that you use both for work and personal use? Constantly forgetting to mute your sound when you get to school or work?
 
