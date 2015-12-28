@@ -10,6 +10,7 @@ import Foundation
 
 struct Constants {
     static let wifiCheckTimeInterval: NSTimeInterval = 2
+    static let dropCounter = 3
 }
 
 enum Action: Int {
@@ -49,4 +50,9 @@ struct NetworkKeys {
 struct DefaultsKeys {
     static let lastSSID = "lastSSID"
     static let launchedBefore = "launchedBefore"
+}
+
+struct NetworkNames {
+    static let notConnected = "not connected"
+    static let notConnectedDisplayName = "Not connected to any network"
 }

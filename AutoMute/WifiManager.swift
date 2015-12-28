@@ -49,7 +49,7 @@ class WifiManager: NSObject {
     }
     
     private class func notConnectedWifiDictionary() -> [String: AnyObject] {
-        let ssid = "Not connected to any network"
+        let ssid = NetworkNames.notConnectedDisplayName
         return [NetworkKeys.ssid: ssid,
             NetworkKeys.lastConnected: NSDate.distantFuture(),
             NetworkKeys.action: NSUserDefaults.standardUserDefaults().objectForKey(ssid) as? Int ?? Action.DoNothing.rawValue]
@@ -64,13 +64,13 @@ class WifiManager: NSObject {
     }
     
     func currentNetwork() -> String {
-        return lastSSID ?? "not connected"
+        return lastSSID ?? NetworkNames.notConnected
     }
     
     func currentAction() -> Action {
         var network = currentNetwork()
-        if network == "not connected" {
-            network = "Not connected to any network"
+        if network == NetworkNames.notConnected {
+            network = NetworkNames.notConnectedDisplayName
         }
         if let action = NSUserDefaults.standardUserDefaults().objectForKey(network) as? Int {
             return Action(rawValue: action) ?? Action.DoNothing
@@ -112,7 +112,7 @@ class WifiManager: NSObject {
                             dropCounter = dc - 1
                         }
                     } else {
-                        dropCounter = 3
+                        dropCounter = Constants.dropCounter
                     }
                 }
             }
