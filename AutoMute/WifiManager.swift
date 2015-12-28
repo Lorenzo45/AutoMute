@@ -18,6 +18,7 @@ class WifiManager: NSObject {
     private var lastSSID: String?
     weak var delegate: WifiManagerDelegate?
     static var networks = WifiManager.getUsedNetworks()
+    private var dropCounter: Int?
     
     override init() {
         lastSSID = NSUserDefaults.standardUserDefaults().valueForKey(DefaultsKeys.lastSSID) as? String
@@ -87,11 +88,36 @@ class WifiManager: NSObject {
     
     func checkSSID() {
         let ssid = wifiInterface?.ssid()
-        if lastSSID != ssid {
+        func updateSSID() {
             lastSSID = ssid
             delegate?.performAction(currentAction())
             NSUserDefaults.standardUserDefaults().setValue(lastSSID, forKey: DefaultsKeys.lastSSID)
             NSUserDefaults.standardUserDefaults().synchronize()
+            dropCounter = nil
+        }
+        
+        if lastSSID != ssid {
+            if ssid != nil {
+                updateSSID()
+            } else {
+                if let wifiIsOn = wifiInterface?.powerOn() where !wifiIsOn {
+                    // Wifi got turned off, proceed normally
+                    updateSSID()
+                } else {
+                    // Wifi got disconnected, add a counter to make sure it's not a quick drop
+                    if let dc = dropCounter {
+                        if dc == 0 {
+                            updateSSID()
+                        } else {
+                            dropCounter = dc - 1
+                        }
+                    } else {
+                        dropCounter = 3
+                    }
+                }
+            }
+        } else {
+            dropCounter = nil
         }
     }
 }
