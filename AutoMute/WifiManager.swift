@@ -26,7 +26,7 @@ class WifiManager: NSObject {
     // Retrieves network info from the user's preferences, returns only the networks that have been connected to and sorted by date last used
     // Also checks user defaults for the actions associated to that network and adds it as a property to the preferences
     private class func getUsedNetworks() -> [[String: AnyObject]] {
-        var usedNetworks = [[String: AnyObject]]()
+        var usedNetworks: [[String: AnyObject]] = [notConnectedWifiDictionary()]
         let airportPreferences = NSDictionary(contentsOfFile: Paths.airportPreferences) as? [String: AnyObject]
         guard let knownNetworks = airportPreferences?[NetworkKeys.knownNetworks] as? [String: AnyObject] else { return usedNetworks }
         for (_, object) in knownNetworks {
@@ -47,6 +47,13 @@ class WifiManager: NSObject {
         return usedNetworks
     }
     
+    private class func notConnectedWifiDictionary() -> [String: AnyObject] {
+        let ssid = "Not connected to any network"
+        return [NetworkKeys.ssid: ssid,
+            NetworkKeys.lastConnected: NSDate.distantFuture(),
+            NetworkKeys.action: NSUserDefaults.standardUserDefaults().objectForKey(ssid) as? Int ?? Action.DoNothing.rawValue]
+    }
+    
     class func updateActionForNetwork(action: Int, index: Int) {
         WifiManager.networks[index][NetworkKeys.action] = action
         if let ssid = WifiManager.networks[index][NetworkKeys.ssid] as? String {
@@ -60,7 +67,11 @@ class WifiManager: NSObject {
     }
     
     func currentAction() -> Action {
-        if let action = NSUserDefaults.standardUserDefaults().objectForKey(currentNetwork()) as? Int {
+        var network = currentNetwork()
+        if network == "not connected" {
+            network = "Not connected to any network"
+        }
+        if let action = NSUserDefaults.standardUserDefaults().objectForKey(network) as? Int {
             return Action(rawValue: action) ?? Action.DoNothing
         }
         return Action.DoNothing
