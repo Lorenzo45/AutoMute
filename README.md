@@ -9,12 +9,25 @@ AutoMute allows you to tell your computer to mute or unmute your Macbook when yo
 # Screenshots
 ![AutoMute Menu](http://i.imgur.com/RwcPhqf.png)
 
-![AutoMute Setup](http://i.imgur.com/iyate5u.png)
+![AutoMute Setup](http://i.imgur.com/nHRbwHH.png)
 
 # Setup
 AutoMute has a super easy one-time setup. When you first launch the app, it shows a list of your most recently used wifi networks and you tell it what you want to happen when you connect to each one. Once everything is set up, you can close the preferences window and AutoMute will work in the background. 
 
 As long as you see the AutoMute icon on your status bar, AutoMute is working. This is also where you can change the settings any time you like.
+
+# Version History
+###1.0 (September 2015)
+Initial release, core funcitonality included wifi monitoring and volume muting/unmuting based on user preferences, and a setup screen that shows the wifi networks that have been connected to by the user in reverse chronological order.
+
+###1.1 (December 2015)
+First update with the following changes:
+- Replaced segmented control in setup screen with a pop-up menu (segmented controls didn't work in El Capitan)
+- Added emojis to setup options for non-english speaking users
+- Added "Not connected to any network" option to the setup menu
+- Added a 10 second timer when wifi drops (to avoid detecting small drops in wifi)
+- Changed setup window to always be on top to avoid losing it behind other windows
+- Released on Mac App Store! (Coming soon)
 
 # Developer Guide
 I've decided to make AutoMute open source and I welcome all feedback, issues, and pull requests. This is my first time making something open source, so if I'm doing something wrong or poorly please let me know!
