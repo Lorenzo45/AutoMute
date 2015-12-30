@@ -18,7 +18,7 @@ As long as you see the AutoMute icon on your status bar, AutoMute is working. Th
 
 # Version History
 ###1.0 (September 2015)
-Initial release, core funcitonality included wifi monitoring and volume muting/unmuting based on user preferences, and a setup screen that shows the wifi networks that have been connected to by the user in reverse chronological order.
+Initial release, core functionality included wifi monitoring and volume muting/unmuting based on user preferences, and a setup screen that shows the wifi networks that have been connected to by the user in reverse chronological order.
 
 ###1.1 (December 2015)
 First update with the following changes:
@@ -27,7 +27,6 @@ First update with the following changes:
 - Added "Not connected to any network" option to the setup menu
 - Added a 10 second timer when wifi drops (to avoid detecting small drops in wifi)
 - Changed setup window to always be on top to avoid losing it behind other windows
-- Released on Mac App Store! (Coming soon)
 
 # Developer Guide
 I've decided to make AutoMute open source and I welcome all feedback, issues, and pull requests. This is my first time making something open source, so if I'm doing something wrong or poorly please let me know!
