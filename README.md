@@ -22,7 +22,7 @@ Initial release, core functionality included wifi monitoring and volume muting/u
 
 ###1.1 (December 2015)
 First update with the following changes:
-- Replaced segmented control in setup screen with a pop-up menu (segmented controls didn't work in El Capitan)
+- El Capitan support (the toggles on the setup screen broke)
 - Added emojis to setup options for non-english speaking users
 - Added "Not connected to any network" option to the setup menu
 - Added a 10 second timer when wifi drops (to avoid detecting small drops in wifi)
