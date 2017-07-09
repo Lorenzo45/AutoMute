@@ -17,10 +17,10 @@ AutoMute has a super easy one-time setup. When you first launch the app, it show
 As long as you see the AutoMute icon on your status bar, AutoMute is working. This is also where you can change the settings any time you like.
 
 # Version History
-###1.0 (September 2015)
+### 1.0 (September 2015)
 Initial release, core functionality included Wi-Fi monitoring and volume muting/unmuting based on user preferences, and a setup screen that shows the Wi-Fi networks that have been connected to by the user in reverse chronological order.
 
-###1.1 (December 2015)
+### 1.1 (December 2015)
 First update with the following changes:
 - El Capitan support (the toggles on the setup screen broke)
 - Added emojis to setup options for non-English speaking users
